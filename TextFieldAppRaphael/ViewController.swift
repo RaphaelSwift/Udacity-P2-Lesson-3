@@ -8,18 +8,48 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var textField1: UITextField!
+    @IBOutlet weak var textField2: UITextField!
+    @IBOutlet weak var textField3: UITextField!
+    
+    @IBOutlet weak var textControl: UISwitch!
+    
+    
+    let zipCodeTextFieldDelegate = ZipCodeTextFieldDelegate()
+    let cashTextFieldDelegate = CashTextFieldDelegate()
+    
+    // Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        // Set the delegates
+        self.textField1.delegate = zipCodeTextFieldDelegate
+        self.textField2.delegate = cashTextFieldDelegate
+        self.textField3.delegate = self
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
+    
+    // Text field delegate methods
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        if textControl.on {
+            return true
+        } else {
+            return false }
+        
+    }
+    
+    
+    // Textfield 3 resigns and becomes first responder upon toggling the switch button
+    @IBAction func switchEditing(sender: UISwitch) {
+        if textControl.on == false {
+            textField3.resignFirstResponder()
+        } else { textField3.becomeFirstResponder()
+    }
 
 }
-
+}

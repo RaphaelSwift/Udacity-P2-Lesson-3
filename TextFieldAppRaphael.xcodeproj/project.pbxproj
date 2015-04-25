@@ -13,6 +13,8 @@
 		F6CDE2111AE91C720088B74B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6CDE2101AE91C720088B74B /* Images.xcassets */; };
 		F6CDE2141AE91C720088B74B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6CDE2121AE91C720088B74B /* LaunchScreen.xib */; };
 		F6CDE2201AE91C730088B74B /* TextFieldAppRaphaelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CDE21F1AE91C730088B74B /* TextFieldAppRaphaelTests.swift */; };
+		F6CDE22B1AE91FD30088B74B /* ZipCodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CDE22A1AE91FD30088B74B /* ZipCodeTextFieldDelegate.swift */; };
+		F6CDE22D1AE936690088B74B /* CashTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CDE22C1AE936690088B74B /* CashTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		F6CDE2191AE91C730088B74B /* TextFieldAppRaphaelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextFieldAppRaphaelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CDE21E1AE91C730088B74B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6CDE21F1AE91C730088B74B /* TextFieldAppRaphaelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAppRaphaelTests.swift; sourceTree = "<group>"; };
+		F6CDE22A1AE91FD30088B74B /* ZipCodeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeTextFieldDelegate.swift; sourceTree = "<group>"; };
+		F6CDE22C1AE936690088B74B /* CashTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +81,11 @@
 		F6CDE2061AE91C720088B74B /* TextFieldAppRaphael */ = {
 			isa = PBXGroup;
 			children = (
-				F6CDE2091AE91C720088B74B /* AppDelegate.swift */,
 				F6CDE20B1AE91C720088B74B /* ViewController.swift */,
 				F6CDE20D1AE91C720088B74B /* Main.storyboard */,
+				F6CDE2291AE91E420088B74B /* TextFieldDelegates */,
 				F6CDE2101AE91C720088B74B /* Images.xcassets */,
+				F6CDE2091AE91C720088B74B /* AppDelegate.swift */,
 				F6CDE2121AE91C720088B74B /* LaunchScreen.xib */,
 				F6CDE2071AE91C720088B74B /* Supporting Files */,
 			);
@@ -110,6 +115,15 @@
 				F6CDE21E1AE91C730088B74B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6CDE2291AE91E420088B74B /* TextFieldDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				F6CDE22A1AE91FD30088B74B /* ZipCodeTextFieldDelegate.swift */,
+				F6CDE22C1AE936690088B74B /* CashTextFieldDelegate.swift */,
+			);
+			name = TextFieldDelegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6CDE20C1AE91C720088B74B /* ViewController.swift in Sources */,
+				F6CDE22D1AE936690088B74B /* CashTextFieldDelegate.swift in Sources */,
+				F6CDE22B1AE91FD30088B74B /* ZipCodeTextFieldDelegate.swift in Sources */,
 				F6CDE20A1AE91C720088B74B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
